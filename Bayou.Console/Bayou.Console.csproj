@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="33.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bayou.Azure\Bayou.Azure.csproj" />
+    <ProjectReference Include="..\Bayou.Common\Bayou.Common.csproj" />
+    <ProjectReference Include="..\Bayou.Domain\Bayou.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
