@@ -49,7 +49,7 @@ namespace Bayou.Cloud.IntegrationTest
 
                 string messageId = await queueWriter.Write(observation);
 
-                Console.WriteLine($"\r\nMessage {messageId} sent.");
+                Console.WriteLine($"Message {messageId} sent.");
             }
         }
 
