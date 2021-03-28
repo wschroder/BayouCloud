@@ -2,7 +2,8 @@
 Demo app to experiment with Azure's API for .Net
 
 Assumptions:
-1. Existence of key-vault (name configured in AppSettings.json)
-2. Keyvault contains storage account connection string
-
-See Setup-KeyVault.ps1 for setting up a service principle for the app which will have access the KeyVault.
+1. Existence of storage account.
+2. Existence of key-vault 
+3. Key vault name defined in Bayou.Cloud.IntegrationTest AppSettings (see "KeyVaultName")
+4. Storage account connection string defined in KeyVault
+5. Service principle defined for this test app, and given rights to the Key Vault.  (See Setup-KeyVault.ps1)
