@@ -1,9 +1,0 @@
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\bin\Debug\netcoreapp3.1\Bayou.Common.deps.json
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\bin\Debug\netcoreapp3.1\Bayou.Common.dll
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\bin\Debug\netcoreapp3.1\Bayou.Common.pdb
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\obj\Debug\netcoreapp3.1\Bayou.Common.csprojAssemblyReference.cache
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\obj\Debug\netcoreapp3.1\Bayou.Common.AssemblyInfoInputs.cache
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\obj\Debug\netcoreapp3.1\Bayou.Common.AssemblyInfo.cs
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\obj\Debug\netcoreapp3.1\Bayou.Common.csproj.CoreCompileInputs.cache
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\obj\Debug\netcoreapp3.1\Bayou.Common.dll
-C:\Users\wschr\source\repos\BayouCloud\Bayou.Common\obj\Debug\netcoreapp3.1\Bayou.Common.pdb
