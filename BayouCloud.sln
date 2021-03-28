@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bayou.Domain", "Bayou.Domain\Bayou.Domain.csproj", "{7266DE62-46A9-465C-A7F8-E64118CDAEFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayou.Domain", "Bayou.Domain\Bayou.Domain.csproj", "{7266DE62-46A9-465C-A7F8-E64118CDAEFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bayou.Azure", "Bayou.Azure\Bayou.Azure.csproj", "{E57AC873-26A5-4C2F-BA6A-B7720CDDAE53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayou.Azure", "Bayou.Azure\Bayou.Azure.csproj", "{E57AC873-26A5-4C2F-BA6A-B7720CDDAE53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bayou.Common", "Bayou.Common\Bayou.Common.csproj", "{A821018F-CD1B-43A3-8568-3C7BDD03A406}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayou.Common", "Bayou.Common\Bayou.Common.csproj", "{A821018F-CD1B-43A3-8568-3C7BDD03A406}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bayou.Cloud.IntegrationTest", "Bayou.Cloud.IntegrationTest\Bayou.Cloud.IntegrationTest.csproj", "{143C0146-C732-45C5-B15B-BC9A47BD6BE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayou.Cloud.IntegrationTest", "Bayou.Cloud.IntegrationTest\Bayou.Cloud.IntegrationTest.csproj", "{143C0146-C732-45C5-B15B-BC9A47BD6BE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{7CF64888-2582-4DB9-B0D0-87A988153550}"
+	ProjectSection(SolutionItems) = preProject
+		Setup-KeyVault.ps1 = Setup-KeyVault.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

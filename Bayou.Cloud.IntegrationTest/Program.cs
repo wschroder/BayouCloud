@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Azure;
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -9,13 +12,31 @@ namespace Bayou.Cloud.IntegrationTest
     {
         static async Task Main(string[] args)
         {
-            IConfigurationRoot config = SetupConfiguration();
+            // Note: Access to the keyvault relies on Role Based Access Control (RBAC), 
+            // with this console application's identify configured as environment variables
+            // (AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_TENANT_ID) that are picked up by
+            // DefaultAzureCredentials.
 
-            string connectionString = config["StorageServiceConnectionString"];
+            string keyVaultName = Environment.GetEnvironmentVariable("KEY_VAULT_NAME");
+            var kvUri = $"https://{keyVaultName}.vault.azure.net";
 
-            var queueTester = new StorageQueueTester(connectionString);
+            var cred = new DefaultAzureCredential();
+            // var cred = new VisualStudioCredential();
+
+            var client = new SecretClient(new Uri(kvUri), cred);
+  
+            Response<KeyVaultSecret> response = await client.GetSecretAsync(name: "StorageServiceConnectionString");
+
+            string storageServiceConnectionString = response.Value.Value;
+
+            // To load config from UserSecrets, use this...
+            // IConfigurationRoot config = SetupConfiguration();
+            // string storageServiceConnectionString = config["StorageServiceConnectionString"];
+
+            var queueTester = new StorageQueueTester(storageServiceConnectionString);
 
             await queueTester.RunTest();
+        
         }
 
         private static IConfigurationRoot SetupConfiguration()
