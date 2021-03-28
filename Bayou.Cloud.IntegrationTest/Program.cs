@@ -9,19 +9,24 @@ namespace Bayou.Cloud.IntegrationTest
     {
         static async Task Main(string[] args)
         {
-            // string connectionString = "DefaultEndpointsProtocol=https;AccountName=wlsstorage779;AccountKey=DvygnXM/eD8G03N9WLwNEI4BpnioyUveK/qzKovLf0zl5aKInokZ0FoLiq+NhlDpjj3d5fx4ynOSP5aKQz8KYg==;EndpointSuffix=core.windows.net";
+            IConfigurationRoot config = SetupConfiguration();
 
+            string connectionString = config["StorageServiceConnectionString"];
+
+            var queueTester = new StorageQueueTester(connectionString);
+
+            await queueTester.RunTest();
+        }
+
+        private static IConfigurationRoot SetupConfiguration()
+        {
             IConfigurationBuilder configBuilder = new ConfigurationBuilder();
             if (IsDevelopment())
             {
                 configBuilder.AddUserSecrets(Assembly.GetExecutingAssembly());
             }
             IConfigurationRoot config = configBuilder.Build();
-            string connectionString = config["StorageServiceConnectionString"];
-
-            var queueTester = new StorageQueueTester(connectionString);
-
-            await queueTester.RunTest();
+            return config;
         }
 
         private static bool IsDevelopment()

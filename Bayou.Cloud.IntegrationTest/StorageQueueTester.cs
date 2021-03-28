@@ -38,6 +38,9 @@ namespace Bayou.Cloud.IntegrationTest
 
         private async Task PerformWrites(string queueName, int numWrites)
         {
+            ParmCheck.NotNullOrEmpty(nameof(queueName), queueName);
+            ParmCheck.Positive(nameof(numWrites), numWrites);
+
             var queueWriter = new QueueWriter(_connectionString, queueName);
 
             for (int i = 0; i < numWrites; i++)
@@ -52,6 +55,8 @@ namespace Bayou.Cloud.IntegrationTest
 
         private async Task<int> PerformReads(string queueName)
         {
+            ParmCheck.NotNullOrEmpty(nameof(queueName), queueName);
+
             int numRead = 0;
             var options = new JsonSerializerOptions { WriteIndented = true };
 

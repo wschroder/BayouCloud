@@ -9,4 +9,8 @@
     <PackageReference Include="Azure.Storage.Queues" Version="12.6.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bayou.Common\Bayou.Common.csproj" />
+  </ItemGroup>
+
 </Project>
