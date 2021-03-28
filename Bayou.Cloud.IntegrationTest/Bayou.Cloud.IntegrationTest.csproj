@@ -23,4 +23,10 @@
     <ProjectReference Include="..\Bayou.Domain\Bayou.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="AppSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
