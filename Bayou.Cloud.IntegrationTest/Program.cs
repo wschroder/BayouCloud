@@ -16,6 +16,7 @@ namespace Bayou.Cloud.IntegrationTest
             // with this console application's identify configured as environment variables
             // (AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_TENANT_ID) that are picked up by
             // DefaultAzureCredentials.
+            // Sett Setup-KeyVault.ps1 for details on setting this up.
 
             string keyVaultName = Environment.GetEnvironmentVariable("KEY_VAULT_NAME");
             var kvUri = $"https://{keyVaultName}.vault.azure.net";
